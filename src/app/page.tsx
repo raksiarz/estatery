@@ -1,11 +1,13 @@
 import HeroSection from "./components/Hero/HeroSection";
-import Footer from "./components/Footer";
+import OfferSection from "./components/OfferSection/OfferSection";
+import Testimonials from "./components/Testimonials/Testimonials";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <Footer />
+      <OfferSection />
+      <Testimonials />
     </>
   );
 }

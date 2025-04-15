@@ -7,9 +7,11 @@ interface ContainerProps {
     right?: number
     left?: number
     bottom?: number
+    absolute?: boolean
+    hasBorder?: boolean
 }
 
-export default function Container({ tag, top, right, left, bottom }: ContainerProps) {
+export default function Container({ tag, hasBorder, absolute, top, right, left, bottom }: ContainerProps) {
     console.log('test', top, right, left, bottom)
     const topPos = top !== undefined ? 'top-' + top : 'top-none'
     const rightPos = right !== undefined ? 'right-' + right : 'right-none'
@@ -17,7 +19,7 @@ export default function Container({ tag, top, right, left, bottom }: ContainerPr
     const bottomPos = bottom !== undefined ? 'bottom-' + bottom : 'bottom-none'
     console.log('element pos: ', topPos, rightPos, leftPos, bottomPos)
     return (
-        <div className={`absolute flex flex-col rounded-lg bg-white w-55 h-55 lg:w-70 lg:h-70 hover:shadow-md transition duration-400 ease ${topPos} ${rightPos} ${leftPos} ${bottomPos}`}>
+        <div className={`${absolute && "absolute"} flex flex-col rounded-lg bg-white w-55 h-55 lg:w-70 lg:h-70 ${hasBorder && "border-1"} border-zinc-100 hover:shadow-md transition duration-400 ease ${topPos} ${rightPos} ${leftPos} ${bottomPos}`}>
             <Image src={houseImage} alt='house image' className='object-cover'/>
             <div className='flex flex-col px-2 pt-3 pb-1 lg:px-4 lg:pt-5 lg:pb-3 text-left'>
                 <div className='flex'>
