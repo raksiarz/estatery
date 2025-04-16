@@ -27,7 +27,7 @@ export default function Container({ price, name, description, image, tag, small,
         <div className={`relative flex flex-col rounded-lg bg-white w-90 h-90 lg:w-120 lg:h-120 overflow-hidden border-zinc-100 hover:shadow-md transition duration-400 ease shrink-0 
             ${hasBorder && "border-1"}
             ${shadow && "shadow-xl shadow-zinc-200"}
-            ${small && "scale-50"}
+            ${small && "scale-50 lg:scale-75 xl:scale-100"}
         `}>
             <Image src={image || ''} alt='house image' className='object-cover'/>
             <div className='flex flex-col pl-5 pt-7 lg:pl-8 lg:pt-12 lg:pb-3 text-left gap-2 lg:gap-3'>
