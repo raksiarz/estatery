@@ -22,7 +22,7 @@ export default function Container({ price, name, description, image, tag, hasBor
     const bottomPos = bottom !== undefined ? 'bottom-' + bottom : 'bottom-none'
     console.log('element pos: ', topPos, rightPos, leftPos, bottomPos)
     return (
-        <div className={`${absolute && "absolute"} flex flex-col rounded-lg bg-white w-55 h-55 lg:w-70 lg:h-70 ${hasBorder && "border-1"} border-zinc-100 hover:shadow-md transition duration-400 ease ${topPos} ${rightPos} ${leftPos} ${bottomPos}`}>
+        <div className={`${absolute && "absolute"} flex flex-col rounded-lg bg-white w-75 h-75 ${hasBorder && "border-1"} overflow-hidden border-zinc-100 hover:shadow-md transition duration-400 ease shrink-0 ${topPos} ${rightPos} ${leftPos} ${bottomPos}`}>
             <Image src={image || ''} alt='house image' className='object-cover'/>
             <div className='flex flex-col px-2 pt-3 pb-1 lg:px-4 lg:pt-5 lg:pb-3 text-left'>
                 <div className='flex'>

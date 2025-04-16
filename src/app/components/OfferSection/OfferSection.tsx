@@ -54,6 +54,7 @@ const APARTAMENTS = [
 
 export default function OfferSection() {
     const [tabState, setTabState] = useState(false)
+
     function callbackFunc(tabState: boolean) {
         setTabState(tabState)
     }
@@ -64,13 +65,13 @@ export default function OfferSection() {
     }
 
     return (
-        <div className="bg-white w-full h-screen flex flex-col px-12 py-10 gap-6">
+        <div className="bg-white w-full h-screen flex items-center flex-col px-15 py-10 gap-10">
             <Tabs state={tabState} callback={callbackFunc}/>
             <div className="flex flex-col text-center gap-5">
                 <h2 className="font-bold text-3xl text-black">We make it easy for houses and apartments.</h2>
                 <span className="text-zinc-300 text-base">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</span>
             </div>
-            <div className="flex gap-3 overflow-scroll">
+            <div className="flex flex-row max-w-screen px-10 items-center gap-3 overflow-x-auto hide-scrollbar lg:gap-10">
                 <CarouselComp />
             </div>
         </div>
