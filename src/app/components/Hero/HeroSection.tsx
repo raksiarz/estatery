@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Container from "../Container"
 import Navbar from '../Navbar'
 import bigMapImage from '../../../public/images/mapBig.png'
+import houseImage from '../../../public/images/apartament3.png'
 
 export default function HeroSection() {
     return (
@@ -26,7 +27,13 @@ export default function HeroSection() {
                 </div>
                 <div className="flex flex-col w-full lg:w-1/2 h-1/2 lg:h-full justify-center items-center">
                     <Image src={bigMapImage} alt='house image' className='w-95 h-95 lg:w-full lg:h-full lg:object-cover' />
-                    <Container absolute top={100} right={100} />
+                    <Container
+                        price='2,700'
+                        name='Beverly Springfield'
+                        description='2821 Lake Sevilla, Palm Harbor, TX'
+                        image={houseImage}
+                        absolute top={100} right={100} 
+                    />
                 </div>
             </div>
         </div>
