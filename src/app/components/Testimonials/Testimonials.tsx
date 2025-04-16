@@ -34,7 +34,7 @@ export default function Testimonials() {
     function AvatarsComp() {
         return (
             <div className="flex gap-6">
-                {TESTIMONIALS.map(item => <Image src={item.image} alt='profile picture' className="w-17 rounded-full object-cover cursor-pointer" onClick={() => setTestimonialId(item.id)}/>)}
+                {TESTIMONIALS.map(item => <Image key={item.id} src={item.image} alt='profile picture' className="w-17 rounded-full object-cover cursor-pointer lg:w-20" onClick={() => setTestimonialId(item.id)}/>)}
             </div>
         )
     }
@@ -42,8 +42,8 @@ export default function Testimonials() {
     function TestimonialContent() {
         const testimony = TESTIMONIALS.find(item => item.id === testimonialId)!
         return (
-            <div className="flex flex-col gap-5 h-65 animate-fade-in">
-                <span className="text-black text-xl">{testimony.content}</span>
+            <div className="flex flex-col items-center gap-5 h-65 animate-fade-in">
+                <span className="text-black text-xl lg:text-2xl lg:w-1/2 lg:py-10">{testimony.content}</span>
                 <span className="text-black font-bold text-base">{testimony.name}, <span className="text-zinc-400 font-normal">Renter</span></span>
             </div>
         )
@@ -52,9 +52,9 @@ export default function Testimonials() {
 
     return (
         <div className="bg-white w-full h-screen flex flex-col">
-            <div className="bg-white w-full h-full flex flex-col text-center items-center px-12 pt-4 gap-8 bg-linear-to-t from-fuchsia-50 to-white to-80%">
-                <h2 className="text-black font-bold text-5xl">Testimonials</h2>
-                <h5 className="text-base text-zinc-400">See what our property managers, landlords, and tenants have to say</h5>
+            <div className="bg-white w-full h-full flex flex-col text-center items-center px-12 pt-12 gap-8 bg-linear-to-t from-fuchsia-50 to-white to-80%">
+                <h2 className="text-black font-bold text-5xl lg:text-6xl">Testimonials</h2>
+                <h5 className="text-base text-zinc-400 lg:text-lg lg:w-75">See what our property managers, landlords, and tenants have to say</h5>
                 <TestimonialContent />
                 <AvatarsComp />
             </div>

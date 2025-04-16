@@ -22,15 +22,15 @@ export default function Container({ price, name, description, image, tag, hasBor
     const bottomPos = bottom !== undefined ? 'bottom-' + bottom : 'bottom-none'
     console.log('element pos: ', topPos, rightPos, leftPos, bottomPos)
     return (
-        <div className={`${absolute && "absolute"} flex flex-col rounded-lg bg-white w-75 h-75 ${hasBorder && "border-1"} overflow-hidden border-zinc-100 hover:shadow-md transition duration-400 ease shrink-0 ${topPos} ${rightPos} ${leftPos} ${bottomPos}`}>
+        <div className={`${absolute && "absolute"} flex flex-col rounded-lg bg-white w-90 h-90 lg:w-120 lg:h-120 ${hasBorder && "border-1"} overflow-hidden border-zinc-100 hover:shadow-md transition duration-400 ease shrink-0 ${topPos} ${rightPos} ${leftPos} ${bottomPos}`}>
             <Image src={image || ''} alt='house image' className='object-cover'/>
-            <div className='flex flex-col px-2 pt-3 pb-1 lg:px-4 lg:pt-5 lg:pb-3 text-left'>
+            <div className='flex flex-col pl-5 pt-7 lg:pl-8 lg:pt-12 lg:pb-3 text-left gap-2 lg:gap-3'>
                 <div className='flex'>
-                    <span className='text-indigo-400 font-bold lg:text-lg text-base mr-1'>${price}</span>
-                    <span className='text-zinc-400 pt-1 lg:text-sm text-xs font-normal'>/month</span>
+                    <span className='text-indigo-400 font-bold text-3xl lg:text-4xl mr-1'>${price}</span>
+                    <span className='text-zinc-400 lg:text-xl text-xl font-normal mt-2 lg:mt-3'>/month</span>
                 </div>
-                <h3 className='text-black font-bold lg:text-lg text-base'>{name}</h3>
-                <span className='text-zinc-400 lg:text-sm text-xs font-normal'>{description}</span>
+                <h3 className='text-black font-bold lg:text-3xl text-2xl'>{name}</h3>
+                <span className='text-zinc-400 lg:text-xl text-lg font-normal'>{description}</span>
             </div>
         </div>
     )
