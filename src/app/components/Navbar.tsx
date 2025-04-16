@@ -37,7 +37,7 @@ export default function Navbar() {
                 <li className='list-none w-full text-center cursor-pinter transition-all'>Sell</li>
                 <li className='list-none w-full text-center cursor-pinter transition-all'>Manage Products</li>
                 <li className='list-none w-full text-center cursor-pinter transition-all'>Resources</li>
-                <Button text="Login" secondary/>
+                <Button text="Login" secondary />
                 <Button text="Sign Up" />
             </div>
         </header>
