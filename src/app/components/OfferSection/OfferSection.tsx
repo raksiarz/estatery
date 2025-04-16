@@ -71,11 +71,11 @@ export default function OfferSection() {
     }
 
     return (
-        <div className="bg-white w-full h-screen flex items-center flex-col px-15 py-10 gap-10">
+    <div className="bg-white w-full h-screen flex items-center flex-col px-15 py-4 gap-10">
             <Tabs state={tabState} callback={callbackFunc}/>
-            <div className="flex flex-col items-center text-center gap-7 lg:w-175">
-                <h2 className="font-bold text-4xl lg:text-6xl text-black">We make it easy for houses and apartments.</h2>
-                <span className="text-zinc-300 text-base lg:text-lg">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</span>
+            <div className="flex flex-col items-center text-center gap-4 lg:w-175">
+                <h2 className="font-bold text-4xl lg:text-5xl text-black">We make it easy for houses and apartments.</h2>
+                <span className="text-zinc-400 text-base lg:text-lg">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</span>
             </div>
             <div className="flex flex-row max-w-screen px-10 items-center gap-3 overflow-x-auto hide-scrollbar lg:gap-10">
                 <CarouselComp />

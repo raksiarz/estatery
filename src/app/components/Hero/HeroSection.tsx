@@ -26,8 +26,8 @@ export default function HeroSection() {
                     </div>
                 </div>
                 <div className="flex flex-col flex-1/2 justify-center items-center">
-                    <Image src={bigMapImage} alt='house image' className='w-95 h-95 lg:w-full lg:h-full lg:object-cover' />
-                    <div className='absolute right-[40%] bottom-[6%] lg:right-[25%] lg:top-[25%]'>
+                    <Image src={bigMapImage} alt='house image' className='w-75 h-75 lg:w-full lg:h-full lg:object-cover' />
+                    <div className='absolute left-[0%] sm:left-[23%] bottom-[5%] lg:right-[10%] lg:top-[25%]'>
                         <Container
                             price='2,700'
                             name='Beverly Springfield'

@@ -12,7 +12,7 @@ export default function LikeIcon() {
         `}
             onClick={() => setIsLiked(!isLiked)}
         >
-            <HeartIcon className={`size-6 text-indigo-400 ${isLiked && "text-white"}`}/>
+            <HeartIcon className={`size-6 text-indigo-400 ${isLiked && "text-white"}`} />
         </div>
     )
 }

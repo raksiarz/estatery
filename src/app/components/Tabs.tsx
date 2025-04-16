@@ -6,7 +6,7 @@ interface tabsProps {
 export default function Tabs({ state, callback }: tabsProps) {
 
     return (
-        <div className="relative min-w-95 mt-4 rounded-md border h-15 p-1 bg-zinc-100 text-lg">
+        <div className="relative min-w-85 my-4 rounded-md border h-13 lg:max-h-15 bg-zinc-100 text-lg">
             <div className="relative w-full h-full flex items-center">
                 <div
                     onClick={() => callback(true)}
@@ -23,7 +23,7 @@ export default function Tabs({ state, callback }: tabsProps) {
             </div>
 
             <span
-                className={`bg-white shadow text-lg flex items-center justify-center w-1/2 rounded h-11 transition-all duration-150 ease-linear top-2 absolute ${state
+                className={`bg-white shadow text-lg flex items-center justify-center w-1/2 rounded h-10 top-1 transition-all duration-150 ease-linear absolute ${state
                     ? 'left-3 text-indigo-600 font-semibold'
                     : 'left-1/2 -ml-3 text-indigo-600 font-semibold'
                     }`}
