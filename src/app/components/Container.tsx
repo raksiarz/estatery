@@ -20,7 +20,7 @@ export default function Container({ price, name, description, image, tag, inHero
                 ${hasBorder && "border-1"}
                 ${inHero && "scale-75 lg:scale-100 animate-fade-in shadow-xl shadow-zinc-300/30"}
             `}>
-                <Image src={image || ''} alt='house image' className='object-cover overflow-hidden' />
+                <Image src={image || ''} alt='house image' className='object-cover' />
                 <div className='flex flex-col pl-3 pt-3 lg:pl-8 lg:pt-8 lg:pb-3 text-left lg:gap-3'>
                     <div className='flex'>
                         <p className='text-indigo-400 font-bold text-xl lg:text-4xl mr-1'>${price}<span className='text-zinc-400 lg:text-lg text-base font-normal mt-1 lg:mt-3 ml-2'>/month</span></p>
@@ -33,7 +33,7 @@ export default function Container({ price, name, description, image, tag, inHero
                 </div>
             </div>
             {tag && (
-                <div className='absolute top-[52%] lg:top-[55%] left-[-6.5%] lg:left-[-3%]'>
+                <div className='absolute top-[52%] lx:top-[55%] left-[-6%] lg:left-[-3.5%] xl:left-[-3%]'>
                     <div className='flex justify-center items-center gap-[3px] text-xs lg:text-sm uppercase bg-indigo-500 p-3 py-1 lg:py-2 rounded-tl-lg rounded-br-lg rounded-tr-lg'>
                         <Image src={star} alt="star icon" className='w-3 lg:w-5' />
                         <span >{tabState ? "house" : "apartament"}</span>
