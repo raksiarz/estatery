@@ -20,10 +20,18 @@ export default function Footer() {
             <div className="flex flex-col w-full lg:flex-row lg:justify-between items-center gap-5">
                 <span className="text-zinc-400 text-xs lg:text-sm w-auto">@2021 Estatery. All rights reserved.</span>
                 <div className="w-auto flex justify-center items-center gap-x-10 opacity-30">
-                    <Image src={facebook} alt="facebook logo" className="w-5 cursor-pointer"/>
-                    <Image src={instagram} alt="instagram logo" className="w-5 cursor-pointer"/>
-                    <Image src={twitter} alt="twitter logo" className="w-5 cursor-pointer"/>
-                    <Image src={linkedin} alt="linkedin logo" className="w-5 cursor-pointer"/>
+                    <a href="#" target="_blank">
+                        <Image src={facebook} alt="facebook logo" className="w-5 cursor-pointer" />
+                    </a>
+                    <a href="#" target="_blank">
+                        <Image src={instagram} alt="instagram logo" className="w-5 cursor-pointer" />
+                    </a>
+                    <a href="https://x.com/vlayer_xyz" target="_blank">
+                        <Image src={twitter} alt="twitter logo" className="w-5 cursor-pointer" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/vlayer-labs/" target="_blank">
+                        <Image src={linkedin} alt="linkedin logo" className="w-5 cursor-pointer" />
+                    </a>
                 </div>
             </div>
         </div>

@@ -35,15 +35,15 @@ export default function Testimonials() {
         return (
             <div className="flex gap-5">
                 {TESTIMONIALS.map(item => (
-                    <div className="relative mt-7 mb-5 lg:mt-10">
+                    <div key={item.id} className="relative mt-7 mb-5 lg:mt-15">
                         <Image
-                            key={item.id}
                             src={item.image}
                             alt='profile picture'
-                            className={`w-12 rounded-full object-cover cursor-pointer md:w-20`}
+                            className="w-12 rounded-full object-cover cursor-pointer sm:w-20"
                             onClick={() => setTestimonialId(item.id)}
                         />
-                        {testimonialId === item.id && <span key={item.id} className="absolute -inset-1 block rounded-full w-15 md:w-22 border-2 border-zinc-200"></span>}
+                        {testimonialId === item.id && <span className="absolute -inset-1 block rounded-full w-14 sm:w-22 border-3 border-zinc-200"></span>}
+                        {testimonialId === item.id && <span className="absolute -inset-1 block rounded-full rotate-30 border-s-transparent rw-14 sm:w-22 border-3 border-indigo-400"></span>}
                     </div>
                 )
                 )}
@@ -55,8 +55,8 @@ export default function Testimonials() {
         const testimony = TESTIMONIALS.find(item => item.id === testimonialId)!
         return (
             <div className="flex flex-col items-center gap-5 h-65 animate-fade-in">
-                <span className="text-black text-xl lg:text-2xl xl:text-3xl lg:w-1/2 lg:pt-7">{testimony.content}</span>
-                <span className="text-black font-bold text-base">{testimony.name}, <span className="text-zinc-400 font-normal">Renter</span></span>
+                <p className="text-black text-xl lg:text-2xl xl:text-3xl lg:w-1/2 lg:pt-7">{testimony.content}</p>
+                <p className="text-black font-bold text-base lg:text-lg">{testimony.name}, <span className="text-zinc-400 font-normal lg:text-lg">Renter</span></p>
             </div>
         )
     }
@@ -64,7 +64,7 @@ export default function Testimonials() {
 
     return (
         <div className="bg-white w-full h-screen flex flex-col">
-            <div className="bg-white w-full h-full flex flex-col text-center items-center px-12 pt-8 gap-5 bg-linear-to-t from-fuchsia-50 to-white to-80%">
+            <div className="bg-white w-full h-full flex flex-col text-center items-center px-12 pt-8 lg:pt-12 gap-5 bg-linear-to-t from-fuchsia-50 to-white to-80%">
                 <h2 className="text-black font-bold text-4xl lg:text-6xl">Testimonials</h2>
                 <h5 className="text-base text-zinc-400 lg:text-lg lg:w-[75%] lg:my-5">See what our property managers, landlords, and tenants have to say</h5>
                 <TestimonialContent />
