@@ -26,7 +26,7 @@ export default function HeroSection() {
                     </div>
                 </div>
                 <div className='flex flex-col justify-center items-center h-full w-full'>
-                    <div className='w-75 h-75 lg:w-full lg:h-full overflow-hidden relative'>
+                    <div className='w-75 h-75 lg:w-full lg:h-full relative'>
                         <Image src={bigMapImage} alt='house image' className="h-full w-full object-cover absolute right-0"/>
                     </div>
                     <div className='absolute left-[-5%] sm:left-[23%] bottom-[7%] lg:left-[39%] xl:left-[40%] lg:top-[25%]'>

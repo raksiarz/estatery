@@ -11,9 +11,9 @@ export default function Footer() {
             <div className="w-full flex flex-col lg:flex-row lg:justify-between">
                 <Image src={logo} alt="estatery logo" className="w-40 self-start" />
                 <div className="flex flex-row flex-wrap gap-x-35 lg:gap-x-25 gap-y-3 mt-2 justify-center items-center">
-                    <span className="text-zinc-400 text-sm lg:text-base text-center">HELP CENTER</span>
-                    <span className="text-zinc-400 text-sm lg:text-base text-center">FAQ</span>
-                    <span className="text-zinc-400 text-sm lg:text-base text-center">TERMS & PRIVACY</span>
+                    <a href="#" className="text-zinc-400 text-sm lg:text-base text-center">HELP CENTER</a>
+                    <a href="#" className="text-zinc-400 text-sm lg:text-base text-center">FAQ</a>
+                    <a href="#" className="text-zinc-400 text-sm lg:text-base text-center">TERMS & PRIVACY</a>
                 </div>
             </div>
             <div className="h-[1px] bg-zinc-100 w-full my-4"></div>
