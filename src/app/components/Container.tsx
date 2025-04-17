@@ -23,7 +23,7 @@ export default function Container({ price, name, description, image, tag, inHero
                 <Image src={image || ''} alt='house image' className='object-cover' />
                 <div className='flex flex-col pl-3 pt-3 lg:pl-8 lg:pt-8 lg:pb-3 text-left lg:gap-3'>
                     <div className='flex'>
-                        <p className='text-indigo-400 font-bold text-xl lg:text-4xl mr-1'>${price}<span className='text-zinc-400 lg:text-lg text-base font-normal mt-1 lg:mt-3 ml-2'>/month</span></p>
+                        <p className='text-indigo-400 font-bold text-xl lg:text-4xl mr-2'>${price}<span className='text-zinc-400 lg:text-lg text-base font-normal mt-1 lg:mt-3'>/month</span></p>
                     </div>
                     <h3 className='text-black font-bold lg:text-3xl text-lg'>{name}</h3>
                     <p className='text-zinc-400 lg:text-lg text-xs font-normal'>{description}</p>
