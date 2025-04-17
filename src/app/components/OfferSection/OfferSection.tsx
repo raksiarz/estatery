@@ -67,7 +67,11 @@ export default function OfferSection() {
 
     function CarouselComp() {
         const list = tabState ? HOUSES : APARTAMENTS
-        return list.map(item => <Container key={item.id} price={item.price} name={item.name} description={item.description} image={item.image} hasBorder />)
+        return (
+            <div className="flex flex-row max-w-screen px-10 items-center gap-3 overflow-x-auto hide-scrollbar lg:gap-10 animate-fade-in">
+                {list.map(item => <Container key={item.id} price={item.price} name={item.name} description={item.description} image={item.image} hasBorder />)}
+            </div>
+        )
     }
 
     return (
@@ -77,9 +81,7 @@ export default function OfferSection() {
                 <h2 className="font-bold text-4xl lg:text-5xl text-black">We make it easy for houses and apartments.</h2>
                 <p className="text-zinc-400 text-base lg:text-lg">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
             </div>
-            <div className="flex flex-row max-w-screen px-10 items-center gap-3 overflow-x-auto hide-scrollbar lg:gap-10">
-                <CarouselComp />
-            </div>
+            <CarouselComp />
         </div>
     )
 }

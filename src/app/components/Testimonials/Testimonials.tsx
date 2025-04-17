@@ -35,7 +35,7 @@ export default function Testimonials() {
         return (
             <div className="flex gap-5">
                 {TESTIMONIALS.map(item => (
-                    <div key={item.id} className="relative mt-7 mb-5 lg:mt-15">
+                    <div key={item.id} className="relative mb-5 mt-7 lg:mt-15">
                         <Image
                             src={item.image}
                             alt='profile picture'
@@ -43,7 +43,7 @@ export default function Testimonials() {
                             onClick={() => setTestimonialId(item.id)}
                         />
                         {testimonialId === item.id && <span className="absolute -inset-1 block rounded-full w-14 sm:w-22 border-3 border-zinc-200"></span>}
-                        {testimonialId === item.id && <span className="absolute -inset-1 block rounded-full rotate-30 border-s-transparent rw-14 sm:w-22 border-3 border-indigo-400"></span>}
+                        {testimonialId === item.id && <span className="absolute -inset-1 block rounded-full rotate-30 border-s-transparent rw-14 sm:w-22 border-3 border-indigo-400 animate-spin"></span>}
                     </div>
                 )
                 )}

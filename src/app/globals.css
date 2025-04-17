@@ -14,7 +14,6 @@
 
 @theme {
   --animate-fade-in: fadeIn .5s ease-in-out;
-  --animate-fade-out: fadeOut .5s ease-in-out;
 
   @keyframes fadeIn {
     0% {
@@ -28,17 +27,22 @@
       opacity: 1;
     }
   }
+}
 
-  @keyframes fadeOut {
+@theme {
+  --animate-spin: spin 1s ease-in-out;
+
+  @keyframes spin {
     0% {
-      opacity: 1;
+      opacity: 0;
+      transform: rotate(-400deg)
     },
-    50% {
-      opacity: .75;
+    75% {
+      opacity: 0.5;
     },
     100% {
-      opacity: 0;
-      transform: translateY(15%);
+      opacity: 1;
+      transform: rotate(0deg);
     }
   }
 }
