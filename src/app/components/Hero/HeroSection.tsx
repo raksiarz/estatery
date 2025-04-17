@@ -36,7 +36,6 @@ export default function HeroSection() {
                             description='2821 Lake Sevilla, Palm Harbor, TX'
                             image={houseImage}
                             inHero
-                            shadow
                         />
                     </div>
                 </div>

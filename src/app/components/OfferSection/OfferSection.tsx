@@ -59,7 +59,7 @@ const APARTAMENTS = [
 
 
 export default function OfferSection() {
-    const [tabState, setTabState] = useState(false)
+    const [tabState, setTabState] = useState(true)
 
     function callbackFunc(tabState: boolean) {
         setTabState(tabState)
@@ -69,7 +69,7 @@ export default function OfferSection() {
         const list = tabState ? HOUSES : APARTAMENTS
         return (
             <div className="flex flex-row max-w-screen px-10 items-center gap-3 overflow-x-auto hide-scrollbar lg:gap-10 animate-fade-in">
-                {list.map(item => <Container key={item.id} price={item.price} name={item.name} description={item.description} image={item.image} hasBorder />)}
+                {list.map(item => <Container key={item.id} price={item.price} name={item.name} description={item.description} image={item.image} tabState={tabState} hasBorder tag />)}
             </div>
         )
     }
