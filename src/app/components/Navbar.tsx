@@ -22,7 +22,7 @@ export default function Navbar() {
         <header className="flex justify-between items-center text-black bg-white h-[64px] lg:h-24">
             <ul className="hidden w-full h-full lg:flex lg:justify-around lg:items-center gap-10">
                 <Image src={logo} alt="company logo" className="w-40"/>
-                <div className="flex gap-10">
+                <div className="flex gap-8 lx:gap-10">
                     <li className="cursor-pointer text-base font-semibold">Rent</li>
                     <li className="cursor-pointer text-base font-semibold">Buy</li>
                     <li className="cursor-pointer text-base font-semibold">Sell</li>

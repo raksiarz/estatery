@@ -71,7 +71,7 @@ export default function OfferSection() {
     }
 
     return (
-    <div className="bg-white w-full h-screen flex items-center flex-col px-15 py-4 gap-10">
+    <div className="bg-white w-full h-screen flex items-center flex-col px-15 py-4 gap-7 lg:gap-10">
             <Tabs state={tabState} callback={callbackFunc}/>
             <div className="flex flex-col items-center text-center gap-4 lg:w-175">
                 <h2 className="font-bold text-4xl lg:text-5xl text-black">We make it easy for houses and apartments.</h2>
